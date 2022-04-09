@@ -1,0 +1,28 @@
+{
+  "root": "apps/it-blog-e2e",
+  "sourceRoot": "apps/it-blog-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/it-blog-e2e/cypress.json",
+        "devServerTarget": "it-blog:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "it-blog:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/it-blog-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["it-blog"]
+}

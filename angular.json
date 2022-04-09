@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "it-blog": "apps/it-blog",
+    "it-blog-e2e": "apps/it-blog-e2e"
+  }
+}
